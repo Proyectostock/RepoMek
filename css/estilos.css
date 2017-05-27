@@ -1,0 +1,62 @@
+
+body {
+    background-image: url('../img/fondo_plateado.jpg');
+    
+}
+
+.jumbotron{
+    background-color: #0ABFBC ;
+    color:white;
+}
+
+.panel-heading{
+    background-color: #0ABFBC !important;
+    color: white !important;
+}
+ 
+.panel-body {
+    color: #050505 !important;
+    
+} 
+
+.navbar {
+    background-color: #1FDBD8;
+}
+
+.navbar-brand:link, .navbar-brand:visited {
+    color: white !important;
+}
+
+.navbar-brand:hover, .navbar-brand:active {
+    color:#050505 !important;
+}
+
+/*lo de abajo correponde al texto mek s.a*/
+#navbar li a:link, #navbar li a:visited {
+    color: #0F02FA !important;
+}
+
+#navbar li a:hover, #navbar li a:active {
+    color: #FA0019 !important;
+}
+
+.navbar li ul {
+    background:#1FDBD8;
+}
+
+.nav li a:hover {
+    color: #434343;
+}
+
+.nav li a:hover {
+    background-color: #434343;
+}
+
+
+.navbar li ul :hover{
+    background-color:#434343
+}
+
+
+
+
