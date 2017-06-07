@@ -81,7 +81,93 @@
 
         <p align="center"><img src="img/impacto2.jpg" width="722" height="129"></p>
 
+        <form class="form-horizontal">
+            <fieldset>
 
+
+          <div class="form-group">
+                    <label class="col-md-4 control-label" for="codigo">Codigo</label>  
+                    <div class="col-md-2">
+                        <input id="cantidad" name="codigo" type="text" placeholder="" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Select Basic -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="tipo_insumo">Tipo de insumo</label>
+                    <div class="col-md-4">
+                        <select id="tipo_insumo" name="tipo_insumo" class="form-control">
+                            <option value="1">Tintas</option>
+                            <option value="2">Martillos</option>
+                            <option value="">Ribbon</option>
+                            <option value="">Tractores</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Multiple Radios (inline) -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="maquinas">Maquina</label>
+                    <div class="col-md-4"> 
+                        <label class="radio-inline" for="maquinas-0">
+                            <input type="radio" name="maquinas" id="maquinas-0" value="" checked="checked">
+                            PRINTRONIX
+                        </label> 
+                        <label class="radio-inline" for="maquinas-1">
+                            <input type="radio" name="maquinas" id="maquinas-1" value="">
+                            IBM 6500
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="martillos">Martillos</label>
+                    <div class="col-md-4">
+                        <select id="martillos" name="martillos" class="form-control">
+                            <option value="1">Spring 1500</option>
+                            <option value="2">Spring 1505</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="ribbon">Ribbon</label>
+                    <div class="col-md-4">
+                        <select id="ribbon" name="ribbon" class="form-control" multiple="multiple">
+                            <option value="1">P7210</option>
+                            <option value="2">P5215</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="tractores">Tractores</label>  
+                    <div class="col-md-4">
+                        <input id="tractores" name="tractores" type="text" placeholder="" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="tintas">Tintas</label>
+                    <div class="col-md-4">
+                        <select id="tintas" name="tintas" class="form-control">
+                            <option value="1">Alta penetrancia</option>
+                            <option value="2">Negro penetrante</option>
+                            <option value="">Viro verde</option>
+                            <option value="">Invisible</option>
+                            <option value="">Negro fijo</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="codigo">Cantidad</label>  
+                    <div class="col-md-2">
+                        <input id="cantidad" name="cantidad" type="text" placeholder="" class="form-control input-md">
+
+                    </div>
+                </div>
+            </fieldset>
+        </form>
 
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
