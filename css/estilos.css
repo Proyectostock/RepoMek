@@ -5,7 +5,9 @@ body {
 }
 
 .jumbotron{
-    background-color: #0ABFBC ;
+    /*Fondo de Jumbotron*/
+    background-color: #1FDBD8;
+    /*Fuente de Jumbotron*/
     color:white;
 }
 
@@ -20,27 +22,32 @@ body {
 } 
 
 .navbar {
+    /*Fondo barra superior*/
     background-color: #1FDBD8;
 }
 
 .navbar-brand:link, .navbar-brand:visited {
+    /*Barra superior link visitado*/
     color: white !important;
 }
 
 .navbar-brand:hover, .navbar-brand:active {
-    color:#050505 !important;
+    /*Al pasar el cursor*/
+    color:#0F02FA !important;
 }
 
 /*lo de abajo correponde al texto mek s.a*/
 #navbar li a:link, #navbar li a:visited {
-    color: #0F02FA !important;
-}
-
-#navbar li a:hover, #navbar li a:active {
     color: white !important;
 }
 
+#navbar li a:hover, #navbar li a:active {
+    /*Al pasar el cursor sobre el submenu o lista*/
+    color: #0F02FA !important;
+}
+
 .navbar li ul {
+    /*Fondo del submenu o lista*/
     background:#1FDBD8;
 }
 
@@ -49,12 +56,13 @@ body {
 }
 
 .nav li a:hover {
-    background-color: #434343;
+    background-color: red;
 }
 
 
 .navbar li ul :hover{
-    background-color:#434343
+    /*Fondo del submenu o lista*/
+    background-color:white
 }
 
 
