@@ -7,8 +7,12 @@ body {
 .jumbotron{
     /*Fondo de Jumbotron*/
     background-color: #1FDBD8;
+    /*background-image: url('../img/jumbotronback.jpg');*/
     /*Fuente de Jumbotron*/
     color:white;
+    width: 500%; /* Ancho del contenedor */
+    height: 200px; /* Altura en pixeles del contenedor   */
+    max-width:1140px;  /* Largo maximo del contenedor */
 }
 
 .panel-heading{
@@ -23,6 +27,7 @@ body {
 
 .navbar {
     /*Fondo barra superior*/
+    /*background-image: url('../img/jumbotronback.jpg');*/
     background-color: #1FDBD8;
 }
 
