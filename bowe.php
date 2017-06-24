@@ -4,13 +4,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Mek - Laser</title>
+        <title>Mek - Bowe</title>
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/estilos.css" rel="stylesheet">
         <link rel="shortcut icon" type="image/x-icon" href="img/iconohead.ico">
 
-       
+        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     </head>
@@ -37,12 +37,12 @@
                                 Inventario <span class="caret"> </span>
                             </a>
                             <ul class="dropdown-menu">
-                               <li><a href="laser.html">Laser</a></li>
-                                <li><a href="impacto2.html">Impacto</a></li>
-                                <li><a href="bowe.html">Bowe</a></li>
-                                <li><a href="slalom.html">Slalom</a></li>
-                                <li><a href="revisado.html">Revisado</a></li>
-                                <li><a href="despacho.html">Despacho</a></li>
+                                <li><a href="laser.php">Laser</a></li>
+                                <li><a href="impacto2.php">Impacto</a></li>
+                                <li><a href="bowe.php">Bowe</a></li>
+                                <li><a href="slalom.php">Slalom</a></li>
+                                <li><a href="revisado.php">Revisado</a></li>
+                                <li><a href="despacho.php">Despacho</a></li>
                             </ul> 
                         </li>
                         <li class="dropdown">
@@ -78,8 +78,7 @@
 
 
         </nav>
-
-       <div class="container" style="
+ <div class="container" style="
             margin-top: 39px;
             padding-top: 0px;
             height: 250px;
@@ -87,12 +86,11 @@
             margin-bottom: 0px;
         ">
             <div class="jumbotron">
-                <h1>Laser</h1>
+                <h1>Bowe</h1>
                 
             </div>
         </div>
 
-       
 
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
