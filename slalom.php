@@ -37,12 +37,12 @@
                                 Inventario <span class="caret"> </span>
                             </a>
                             <ul class="dropdown-menu">
-                               <li><a href="laser.html">Laser</a></li>
-                                <li><a href="impacto2.html">Impacto</a></li>
-                                <li><a href="bowe.html">Bowe</a></li>
-                                <li><a href="slalom.html">Slalom</a></li>
-                                <li><a href="revisado.html">Revisado</a></li>
-                                <li><a href="despacho.html">Despacho</a></li>
+                               <li><a href="laser.php">Laser</a></li>
+                                <li><a href="impacto2.php">Impacto</a></li>
+                                <li><a href="bowe.php">Bowe</a></li>
+                                <li><a href="slalom.php">Slalom</a></li>
+                                <li><a href="revisado.php">Revisado</a></li>
+                                <li><a href="despacho.php">Despacho</a></li>
                             </ul> 
                         </li>
                         <li class="dropdown">
