@@ -1,5 +1,23 @@
-<html lang="es">
-    <head>
+<?php
+include("funciones.php"); 
+$conexion = conectar_BD(
+		"localhost", // Host de la base de datos
+		"repomek", // Nombre de la base de datos
+		"root", // Usuario
+		"" // Contraseña
+	);
+        var_dump($_POST);
+
+        if ($_POST)
+{
+alta_registro (
+		$conexion, // La referencia a la base de datos
+		"pedidos", // La tabla en la que se dará de alta
+            array("codigo" => $_POST['codigo'], "tipo_de_insumo" => $_POST['tipo_de_insumo'])//, "maquina" => $_POST['maquina'], "martillos" => $_POST['martillos'], "ribbon" => $_POST['ribbon'],"tractores" => $_POST['tractores'], "tintas" => $_POST['tintas'], "cantidad" => $_POST['cantidad']) // Los valores del registro "campo" => "valor"
+	);
+}
+?>
+<head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +31,7 @@
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    </head>
+</head>
     <body>  
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
@@ -37,12 +55,12 @@
                                 Inventario <span class="caret"> </span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="laser.html">Laser</a></li>
-                                <li><a href="impacto2.html">Impacto</a></li>
-                                <li><a href="bowe.html">Bowe</a></li>
-                                <li><a href="slalom.html">Slalom</a></li>
-                                <li><a href="revisado.html">Revisado</a></li>
-                                <li><a href="despacho.html">Despacho</a></li>
+                                <li><a href="laser.php">Laser</a></li>
+                                <li><a href="impacto2.php">Impacto</a></li>
+                                <li><a href="bowe.php">Bowe</a></li>
+                                <li><a href="slalom.php">Slalom</a></li>
+                                <li><a href="revisado.php">Revisado</a></li>
+                                <li><a href="despacho.php">Despacho</a></li>
                             </ul> 
                         </li>
                         <li class="dropdown">
@@ -94,23 +112,23 @@
 
        
         
-        <form class="form-horizontal" method="POST" action="crearPedido.php">
+        <form class="form-horizontal" method="POST" action="impacto2.php" id="formulario_impacto">
             <fieldset>
 
 
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="codigo">Codigo</label>  
                     <div class="col-md-2">
-                        <input id="cantidad" name="codigo" type="text" placeholder="" class="form-control input-md">
+                        <input id="codigo" name="codigo" type="text" placeholder="" class="form-control input-md" required>
 
                     </div>
                 </div>
 
                 <!-- Select Basic -->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="tipo_insumo">Tipo de insumo</label>
+                    <label class="col-md-4 control-label" for="tipo_de_insumo">Tipo de insumo</label>
                     <div class="col-md-4">
-                        <select id="tipo_insumo" name="tipo_insumo" class="form-control">
+                        <select id="tipo_de_insumo" name="tipo_de_insumo" class="form-control">
                             <option value="1">Tintas</option>
                             <option value="2">Martillos</option>
                             <option value="">Ribbon</option>
@@ -121,14 +139,14 @@
 
                 <!-- Multiple Radios (inline) -->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="maquinas">Maquina</label>
+                    <label class="col-md-4 control-label" for="maquina">Maquina</label>
                     <div class="col-md-4"> 
-                        <label class="radio-inline" for="maquinas-0">
-                            <input type="radio" name="maquinas" id="maquinas-0" value="" checked="checked">
+                        <label class="radio-inline" for="maquina-0">
+                            <input type="radio" name="maquina" id="maquina-0" value="" checked="checked">
                             PRINTRONIX
                         </label> 
-                        <label class="radio-inline" for="maquinas-1">
-                            <input type="radio" name="maquinas" id="maquinas-1" value="">
+                        <label class="radio-inline" for="maquina-1">
+                            <input type="radio" name="maquina" id="maquina-1" value="">
                             IBM 6500
                         </label>
                     </div>
@@ -191,8 +209,10 @@
 
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.validate.js"></script>
+        <script >$("#formulario_impacto").validate();
+        </script>
 
     </body>
 
-</html>
 
