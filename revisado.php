@@ -31,14 +31,14 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.php">Inicio</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
                                 Inventario <span class="caret"> </span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="laser.php">Laser</a></li>
-                                <li><a href="impacto2.php">Impacto</a></li>
+                                <li><a href="impacto.php">Impacto</a></li>
                                 <li><a href="bowe.php">Bowe</a></li>
                                 <li><a href="slalom.php">Slalom</a></li>
                                 <li><a href="revisado.php">Revisado</a></li>

@@ -1,3 +1,8 @@
+<?php
+
+
+?>
+
 <html lang="es">
     <head>
         <meta charset="UTF-8">
@@ -5,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Mek</title>
-    $miConexion = conectar_BD ("localhost", "repomek”, "root", “”); 
+        
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/estilos.css" rel="stylesheet">
         <link rel="shortcut icon" type="image/x-icon" href="img/iconohead.ico">
@@ -30,14 +35,14 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.php">Inicio</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
                                 Inventario <span class="caret"> </span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="laser.php">Laser</a></li>
-                                <li><a href="impacto2.php">Impacto</a></li>
+                                <li><a href="impacto.php">Impacto</a></li>
                                 <li><a href="bowe.php">Bowe</a></li>
                                 <li><a href="slalom.php">Slalom</a></li>
                                 <li><a href="revisado.php">Revisado</a></li>

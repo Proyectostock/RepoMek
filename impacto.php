@@ -1,22 +1,25 @@
 <?php
 include("funciones.php"); 
-$conexion = conectar_BD(
+        $conexion = conectar_BD(
 		"localhost", // Host de la base de datos
 		"repomek", // Nombre de la base de datos
 		"root", // Usuario
 		"" // Contraseña
 	);
+        
         var_dump($_POST);
 
-        if ($_POST)
-{
-alta_registro (
-		$conexion, // La referencia a la base de datos
-		"pedidos", // La tabla en la que se dará de alta
-            array("codigo" => $_POST['codigo'], "tipo_de_insumo" => $_POST['tipo_de_insumo'])//, "maquina" => $_POST['maquina'], "martillos" => $_POST['martillos'], "ribbon" => $_POST['ribbon'],"tractores" => $_POST['tractores'], "tintas" => $_POST['tintas'], "cantidad" => $_POST['cantidad']) // Los valores del registro "campo" => "valor"
-	);
-}
+            if ($_POST)
+            {
+            alta_registro 
+                (
+                $conexion, // La referencia a la base de datos
+                "pedidos", // La tabla en la que se dará de alta
+                array("codigo" => $_POST['codigo'], "tipo_de_insumo" => $_POST['tipo_de_insumo'])//, "maquina" => $_POST['maquina'], "martillos" => $_POST['martillos'], "ribbon" => $_POST['ribbon'],"tractores" => $_POST['tractores'], "tintas" => $_POST['tintas'], "cantidad" => $_POST['cantidad']) // Los valores del registro "campo" => "valor"
+                );
+            }
 ?>
+
 <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,14 +52,14 @@ alta_registro (
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.php">Inicio</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
                                 Inventario <span class="caret"> </span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="laser.php">Laser</a></li>
-                                <li><a href="impacto2.php">Impacto</a></li>
+                                <li><a href="impacto.php">Impacto</a></li>
                                 <li><a href="bowe.php">Bowe</a></li>
                                 <li><a href="slalom.php">Slalom</a></li>
                                 <li><a href="revisado.php">Revisado</a></li>
@@ -112,7 +115,7 @@ alta_registro (
 
        
         
-        <form class="form-horizontal" method="POST" action="impacto2.php" id="formulario_impacto">
+        <form class="form-horizontal" method="POST" action="impacto.php" id="formulario_impacto">
             <fieldset>
 
 
