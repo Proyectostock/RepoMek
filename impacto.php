@@ -1,5 +1,5 @@
 <?php
-include("funciones.php"); 
+include("funciones.php");//Incluye la funcion para el ABM de datos del formulario 
         $conexion = conectar_BD(
 		"localhost", // Host de la base de datos
 		"repomek", // Nombre de la base de datos
@@ -50,9 +50,12 @@ include("funciones.php");
                     </button>
                     <a class="navbar-brand" href="#">Mek</a>
                 </div>
+<!--Barra de Menu Superior-->
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
+<!--Acceso directo al Menu principal-->
                         <li><a href="index.php">Inicio</a></li>
+<!--Inventario Menu desplegable hacia abajo-->
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
                                 Inventario <span class="caret"> </span>
@@ -64,8 +67,10 @@ include("funciones.php");
                                 <li><a href="slalom.php">Slalom</a></li>
                                 <li><a href="revisado.php">Revisado</a></li>
                                 <li><a href="despacho.php">Despacho</a></li>
+                                
                             </ul> 
                         </li>
+<!--Produccion Menu desplegable hacia abajo-->                        
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
                                 Produccion <span class="caret"></span>
@@ -79,20 +84,37 @@ include("funciones.php");
 
                             </ul>
                         </li>
+<!--Proveedores Menu desplegable hacia abajo-->                        
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                                Proveedores <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
 
-                        <li><a href="#">Proveedores</a></li>
-                        <li><a href="#">Contacto</a></li>
+                            </ul>
+                        </li>
+
+<!--<li><a href="#">Contacto</a></li>-->
                     </ul>
-                    <form class="navbar-form navbar-right" role="search">
+                    
+<!--Boton enviar-->
+<!--                    <form class="navbar-form navbar-right" role="search">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Buscar">
                         </div>
                         <button type="submit" class="btn btn-default">Enviar</button>
                     </form>
-                    <ul class="nav navbar-nav navbar-right">
+                    -->
+<!--Iniciar Sesion y Registro-->
+<!--                    <ul class="nav navbar-nav navbar-right">
                         <li><a href="#">Iniciar sesion</a></li>
                         <li><a href="#">Registro</a></li>
-                    </ul>
+                    </ul>-->
 
                 </div>
             </div>
