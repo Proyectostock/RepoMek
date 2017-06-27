@@ -36,7 +36,7 @@ include("funciones.php");//Incluye la funcion para el ABM de datos del formulari
 
 </head>
     <body>  
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -48,7 +48,7 @@ include("funciones.php");//Incluye la funcion para el ABM de datos del formulari
                         <span class="icon-bar"></span>
 
                     </button>
-                    <a class="navbar-brand" href="#">Mek</a>
+                    <a class="navbar-brand" href="#">Mek - Impacto</a>
                 </div>
 <!--Barra de Menu Superior-->
                 <div id="navbar" class="navbar-collapse collapse">
@@ -121,8 +121,9 @@ include("funciones.php");//Incluye la funcion para el ABM de datos del formulari
 
 
         </nav>
-        
-      <div class="container" style="
+
+Jumbotron        
+        <div class="container" style="
             margin-top: 39px;
             padding-top: 0px;
             height: 250px;
@@ -137,14 +138,14 @@ include("funciones.php");//Incluye la funcion para el ABM de datos del formulari
 
        
         
-        <form class="form-horizontal" method="POST" action="impacto.php" id="formulario_impacto">
+<form class="form-horizontal" method="POST" action="impacto.php" id="formulario_impacto" style="margin-top:;margin-top: 0px;" 800px;="" novalidate="novalidate">
             <fieldset>
 
 
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="codigo">Codigo</label>  
                     <div class="col-md-2">
-                        <input id="codigo" name="codigo" type="text" placeholder="" class="form-control input-md" required>
+                        <input id="codigo" name="codigo" type="text" placeholder="" class="form-control input-md" required="" aria-required="true">
 
                     </div>
                 </div>
@@ -231,6 +232,8 @@ include("funciones.php");//Incluye la funcion para el ABM de datos del formulari
 
             </fieldset>
         </form>
+            </fieldset>
+        
 
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
