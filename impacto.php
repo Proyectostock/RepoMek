@@ -15,7 +15,7 @@ include("funciones.php");//Incluye la funcion para el ABM de datos del formulari
                 (
                 $conexion, // La referencia a la base de datos
                 "pedidos", // La tabla en la que se dará de alta
-                array("codigo" => $_POST['codigo'], "tipo_de_insumo" => $_POST['tipo_de_insumo'])//, "maquina" => $_POST['maquina'], "martillos" => $_POST['martillos'], "ribbon" => $_POST['ribbon'],"tractores" => $_POST['tractores'], "tintas" => $_POST['tintas'], "cantidad" => $_POST['cantidad']) // Los valores del registro "campo" => "valor"
+                array("codigo" => $_POST['codigo'], "tipo_de_insumo" => $_POST['tipo_de_insumo'], "maquina" => $_POST['maquina'], "martillos" => $_POST['martillos'], "ribbon" => $_POST['ribbon'],"tractores" => $_POST['tractores'], "tintas" => $_POST['tintas'], "cantidad" => $_POST['cantidad']) // Los valores del registro "campo" => "valor"
                 );
             }
 ?>
@@ -157,8 +157,8 @@ Jumbotron
                         <select id="tipo_de_insumo" name="tipo_de_insumo" class="form-control">
                             <option value="1">Tintas</option>
                             <option value="2">Martillos</option>
-                            <option value="">Ribbon</option>
-                            <option value="">Tractores</option>
+                            <option value="3">Ribbon</option>
+                            <option value="4">Tractores</option>
                         </select>
                     </div>
                 </div>
@@ -168,11 +168,11 @@ Jumbotron
                     <label class="col-md-4 control-label" for="maquina">Maquina</label>
                     <div class="col-md-4"> 
                         <label class="radio-inline" for="maquina-0">
-                            <input type="radio" name="maquina" id="maquina-0" value="" checked="checked">
+                            <input type="radio" name="maquina" id="maquina-0" value="1" checked="checked">
                             PRINTRONIX
                         </label> 
                         <label class="radio-inline" for="maquina-1">
-                            <input type="radio" name="maquina" id="maquina-1" value="">
+                            <input type="radio" name="maquina" id="maquina-1" value="2">
                             IBM 6500
                         </label>
                     </div>
@@ -195,24 +195,25 @@ Jumbotron
                         </select>
                     </div>
                 </div>
-                <!-- Text input-->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="tractores">Tractores</label>  
+                    <label class="col-md-4 control-label" for="tractores">Tractores</label>
                     <div class="col-md-4">
-                        <input id="tractores" name="tractores" type="text" placeholder="" class="form-control input-md">
-
+                        <select id="tractores" name="tractores" class="form-control">
+                            <option value="1">Generic 1500</option>
+                            <option value="2">Generic 1505</option>
+                        </select>
                     </div>
-                </div>
-
+                </div>             
+             
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="tintas">Tintas</label>
                     <div class="col-md-4">
                         <select id="tintas" name="tintas" class="form-control">
                             <option value="1">Alta penetrancia</option>
                             <option value="2">Negro penetrante</option>
-                            <option value="">Viro verde</option>
-                            <option value="">Invisible</option>
-                            <option value="">Negro fijo</option>
+                            <option value="3">Viro verde</option>
+                            <option value="4">Invisible</option>
+                            <option value="5">Negro fijo</option>
                         </select>
                     </div>
                 </div>
