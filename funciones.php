@@ -11,7 +11,7 @@ Registro de cambios:
 Versión 1.0: Versión inicial
 
 ******************************************************/
-/*-------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
 	function conectar_BD($servidor, $baseDatos, $usuario, $contraseña){		
 
 		// Crea conexión
@@ -25,8 +25,9 @@ Versión 1.0: Versión inicial
 		
 	}
 
-/*-------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
 	function buscar_registro ($conexion, $tabla, $filtros) {
+		$filters = [];
 		
 		//creo el array que va a devolver el resultado
 		$arrayResultado = array();
@@ -38,18 +39,12 @@ Versión 1.0: Versión inicial
 			" WHERE ";
 		
 		//cargo los nombres de campo
-
 		foreach($filtros as $key => $valor) {
-
-			$consulta = $consulta . $key . "=" . $valor;
-
-			//si no está en el último elemento del array
-			if (end(array_keys($filtros)) <> $key)
-				$consulta = $consulta . " AND ";
+			$filters[] = $key . "=" . '"'.$valor.'"';
 		}
-		
-		echo $consulta . "<br>";
-		
+
+		$consulta .= implode(' AND ', $filters);
+
 		//consulto a la base de datos
 		if ($resultados = mysqli_query($conexion, $consulta)) {// si la consulta es exitosa
 			
@@ -69,8 +64,10 @@ Versión 1.0: Versión inicial
 		
 	}
 
-/*-------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
 	function alta_registro ($conexion, $tabla, $datos){
+		$keys = [];
+		$values = [];
 		
 		//creo la consulta
 		$consulta = 
@@ -80,13 +77,10 @@ Versión 1.0: Versión inicial
 		//cargo los nombres de campo
 
 		foreach($datos as $key => $valor) {
-
-			$consulta = $consulta . $key;
-
-			//si no está en el último elemento del array
-			if (end(array_keys($datos)) <> $key)
-				$consulta = $consulta . ",";
+			$keys[] = $key;
 		}
+
+		$consulta .= implode(',', $keys);
 
 		reset($datos);
 
@@ -95,13 +89,10 @@ Versión 1.0: Versión inicial
 
 		//cargo los valores de los campos
 		foreach($datos as $key => $valor) {
-
-			$consulta = $consulta . $valor;
-
-			//si no está en el último elemento del array
-			if (end(array_keys($datos)) <> $key)
-				$consulta = $consulta . ",";
+			$values[] = '"'.$valor.'"';
 		}
+
+		$consulta .= implode(',', $values);
 
 		$consulta = $consulta . ")";
 
@@ -117,8 +108,9 @@ Versión 1.0: Versión inicial
 		
 	}
 
-/*-------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
 	function baja_registro ($conexion, $tabla, $filtros){
+		$filters = [];
 			
 		//creo la consulta
 		$consulta = 
@@ -128,13 +120,10 @@ Versión 1.0: Versión inicial
 		//cargo los nombres de campo
 
 		foreach($filtros as $key => $valor) {
-
-			$consulta = $consulta . $key . "=" . $valor;
-
-			//si no está en el último elemento del array
-			if (end(array_keys($filtros)) <> $key)
-				$consulta = $consulta . " AND ";
+			$filters[] = $key . "=" . '"'.$valor.'"';
 		}
+
+		$consulta .= implode(' AND ', $filters);
 		
 		//consulto a la base de datos
 		if ($resultados = mysqli_query($conexion, $consulta)){ // si la consulta es exitosa
@@ -148,8 +137,10 @@ Versión 1.0: Versión inicial
 		
 	}
 
-/*-------------------------------------------------------------------------------------------------------------------------*/
-	function modificar_registro ($conexion, $tabla, $filtros, $datos){
+/*----------------------------------------------------------------------------------*/
+	function modificar_registro ($conexion, $tabla, $condiciones, $datos){
+		$values = [];
+		$wheres = [];
 		
 		//creo la consulta
 		$consulta = 
@@ -158,24 +149,18 @@ Versión 1.0: Versión inicial
 		
 		// cargo los campos y los nuevos valores
 		foreach($datos as $key => $valor) {
-			
-			$consulta = $consulta . $key . "=" . $valor;
-
-			//si no está en el último elemento del array
-			if (end(array_keys($datos)) <> $key)
-				$consulta = $consulta . ",";
+			$values[] = $key . "=" . '"'.$valor.'"';
 		}
+
+		$consulta .= implode(',', $values);
 		
-		//cargo los filtros
+		//cargo las condiciones
 		$consulta = $consulta . " WHERE ";
-		foreach($filtros as $key => $valor) {
-			
-			$consulta = $consulta . $key . "=" . $valor;
-
-			//si no está en el último elemento del array
-			if (end(array_keys($filtros)) <> $key)
-				$consulta = $consulta . " AND ";
+		foreach($condiciones as $key => $valor) {
+			$wheres[] = $key . "=" . '"'.$valor.'"';
 		}
+
+		$consulta .= implode(',', $wheres);
 		
 		// ejecuto la consulta
 		$resultados = mysqli_query($conexion, $consulta);

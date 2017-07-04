@@ -1,5 +1,4 @@
-<?php
-include("funciones.php");//Incluye la funcion para el ABM de datos del formulario 
+<?php include("funciones.php");//Incluye la funcion para el ABM de datos del formulario 
         $conexion = conectar_BD(
 		"localhost", // Host de la base de datos
 		"repomek", // Nombre de la base de datos
@@ -20,6 +19,7 @@ include("funciones.php");//Incluye la funcion para el ABM de datos del formulari
             }
 ?>
 
+<html lang="es">
 <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,7 +32,7 @@ include("funciones.php");//Incluye la funcion para el ABM de datos del formulari
         <link rel="shortcut icon" type="image/x-icon" href="img/iconohead.ico">
 
         
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
 
 </head>
     <body>  
@@ -227,7 +227,7 @@ Jumbotron
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="enviar"></label>
                     <div class="col-md-4">
-                        <button id="enviar" name="enviar" class="btn btn-primary">Enviar</button>
+                        <button id="enviar" name="enviar" class="btn btn-primary" color="#fff" background-color="#1fdbd8" border-color=#2e6da4";>Enviar</button>
                     </div>
                 </div>
 
@@ -244,4 +244,4 @@ Jumbotron
 
     </body>
 
-
+</html>
