@@ -85,3 +85,8 @@
     background-color:white
 }
 
+.btn-primary {
+    background-color: #0ABFBC !important;
+    color: white !important;
+}
+

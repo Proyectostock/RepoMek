@@ -227,7 +227,7 @@ Jumbotron
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="enviar"></label>
                     <div class="col-md-4">
-                        <button id="enviar" name="enviar" class="btn btn-primary" color="#fff" background-color="#1fdbd8" border-color=#2e6da4";>Enviar</button>
+                        <button id="enviar" name="enviar" class="btn btn-primary">Enviar</button>
                     </div>
                 </div>
 
