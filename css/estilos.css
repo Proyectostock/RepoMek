@@ -1,3 +1,10 @@
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #c71313;
+    background-color: #f9f9f9;
+}
 
 /*body {
     background-image: url('../img/fondo_plateado.jpg');
