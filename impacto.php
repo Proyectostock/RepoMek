@@ -198,7 +198,13 @@
                     for="maquina">Maquina
                 </label>
                 <div class="col-md-4"> 
-                    <label 
+                    <select id="maquina" 
+                            name="maquina" 
+                            class="form-control">
+                        <option value="1">Printronik</option>
+                        <option value="2">IBM 6500</option>
+                    </select>
+<!--                    <label 
                         class="radio-inline" 
                         for="maquina-0">
                         <input 
@@ -220,7 +226,7 @@
                             value="2"
                         >
                             IBM 6500
-                    </label>
+                    </label>-->
                 </div>
             </div>
             <div class="form-group">
