@@ -131,7 +131,7 @@
 
         </nav>
 
-Jumbotron        
+    Jumbotron        
         <div class="container" style="
             margin-top: 39px;
             padding-top: 0px;
@@ -145,111 +145,183 @@ Jumbotron
             </div>
         </div>
 
-       
+<!--Inicio del Formulario alta de registro Impacto      -->
         
-<form class="form-horizontal" method="POST" action="impacto.php" id="formulario_impacto" style="margin-top:;margin-top: 0px;" 800px;="" novalidate="novalidate">
-            <fieldset>
+    <form class="form-horizontal"
+          method="POST" 
+          action="impacto.php" 
+          id="formulario_impacto" 
+          style="margin-top:;margin-top: 0px;"
+          novalidate="novalidate">
+        <fieldset>
+            <div class="form-group">
+                <label 
+                    class="col-md-4 control-label" 
+                    for="codigo">Codigo
+                </label>  
+                <div class="col-md-2">
+                    <input 
+                        id="codigo" 
+                        name="codigo" 
+                        type="text" 
+                        placeholder="" 
+                        class="form-control input-md"
+                        required="" 
+                        aria-required="true"
+                    >
 
-
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="codigo">Codigo</label>  
-                    <div class="col-md-2">
-                        <input id="codigo" name="codigo" type="text" placeholder="" class="form-control input-md" required="" aria-required="true">
-
-                    </div>
                 </div>
+            </div>
 
-                <!-- Select Basic -->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="tipo_de_insumo">Tipo de insumo</label>
-                    <div class="col-md-4">
-                        <select id="tipo_de_insumo" name="tipo_de_insumo" class="form-control">
-                            <option value="1">Tintas</option>
-                            <option value="2">Martillos</option>
-                            <option value="3">Ribbon</option>
-                            <option value="4">Tractores</option>
-                        </select>
-                    </div>
+            <!-- Select Basic -->
+            <div class="form-group">
+                <label 
+                    class="col-md-4 control-label" 
+                    for="tipo_de_insumo">Tipo de insumo
+                </label>
+                <div class="col-md-4">
+                    <select id="tipo_de_insumo" 
+                            name="tipo_de_insumo" 
+                            class="form-control">
+                        <option value="1">Tintas</option>
+                        <option value="2">Martillos</option>
+                        <option value="3">Ribbon</option>
+                        <option value="4">Tractores</option>
+                    </select>
                 </div>
+            </div>
 
-                <!-- Multiple Radios (inline) -->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="maquina">Maquina</label>
-                    <div class="col-md-4"> 
-                        <label class="radio-inline" for="maquina-0">
-                            <input type="radio" name="maquina" id="maquina-0" value="1" checked="checked">
+            <!-- Multiple Radios (inline) -->
+            <div class="form-group">
+                <label 
+                    class="col-md-4 control-label" 
+                    for="maquina">Maquina
+                </label>
+                <div class="col-md-4"> 
+                    <label 
+                        class="radio-inline" 
+                        for="maquina-0">
+                        <input 
+                            type="radio" 
+                            name="maquina" 
+                            id="maquina-0" 
+                            value="1" 
+                            checked="checked"
+                        >
                             PRINTRONIX
-                        </label> 
-                        <label class="radio-inline" for="maquina-1">
-                            <input type="radio" name="maquina" id="maquina-1" value="2">
+                    </label> 
+                    <label 
+                        class="radio-inline" 
+                        for="maquina-1">
+                        <input 
+                            type="radio" 
+                            name="maquina" 
+                            id="maquina-1" 
+                            value="2"
+                        >
                             IBM 6500
-                        </label>
-                    </div>
+                    </label>
                 </div>
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="martillos">Martillos</label>
-                    <div class="col-md-4">
-                        <select id="martillos" name="martillos" class="form-control">
-                            <option value="1">Spring 1500</option>
-                            <option value="2">Spring 1505</option>
-                        </select>
-                    </div>
+            </div>
+            <div class="form-group">
+                <label 
+                    class="col-md-4 control-label" 
+                    for="martillos">Martillos
+                </label>
+                <div class="col-md-4">
+                    <select id="martillos" 
+                            name="martillos" 
+                            class="form-control">
+                        <option value="1">Spring 1500</option>
+                        <option value="2">Spring 1505</option>
+                    </select>
                 </div>
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="ribbon">Ribbon</label>
-                    <div class="col-md-4">
-                        <select id="ribbon" name="ribbon" class="form-control" multiple="multiple">
-                            <option value="1">P7210</option>
-                            <option value="2">P5215</option>
-                        </select>
-                    </div>
+            </div>
+                
+            <div class="form-group">
+                <label 
+                    class="col-md-4 control-label" 
+                    for="ribbon">Ribbon
+                </label>
+                <div class="col-md-4">
+                    <select id="ribbon" 
+                            name="ribbon" 
+                            class="form-control" 
+                            multiple="multiple">
+                        <option value="1">P7210</option>
+                        <option value="2">P5215</option>
+                    </select>
                 </div>
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="tractores">Tractores</label>
-                    <div class="col-md-4">
-                        <select id="tractores" name="tractores" class="form-control">
-                            <option value="1">Generic 1500</option>
-                            <option value="2">Generic 1505</option>
-                        </select>
-                    </div>
-                </div>             
+            </div>
+            
+            <div class="form-group">
+                <label 
+                    class="col-md-4 control-label" 
+                    for="tractores">Tractores
+                </label>
+                <div class="col-md-4">
+                    <select id="tractores"
+                            name="tractores" 
+                            class="form-control">
+                        <option value="1">Generic 1500</option>
+                        <option value="2">Generic 1505</option>
+                    </select>
+                </div>
+            </div>             
              
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="tintas">Tintas</label>
-                    <div class="col-md-4">
-                        <select id="tintas" name="tintas" class="form-control">
-                            <option value="1">Alta penetrancia</option>
-                            <option value="2">Negro penetrante</option>
-                            <option value="3">Viro verde</option>
-                            <option value="4">Invisible</option>
-                            <option value="5">Negro fijo</option>
-                        </select>
-                    </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" 
+                       for="tintas">Tintas
+                </label>
+                <div class="col-md-4">
+                    <select id="tintas"
+                            name="tintas" 
+                            class="form-control">
+                        <option value="1">Alta penetrancia</option>
+                        <option value="2">Negro penetrante</option>
+                        <option value="3">Viro verde</option>
+                        <option value="4">Invisible</option>
+                        <option value="5">Negro fijo</option>
+                    </select>
                 </div>
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="codigo">Cantidad</label>  
-                    <div class="col-md-2">
-                        <input id="cantidad" name="cantidad" type="text" placeholder="" class="form-control input-md">
+            </div>
+            
+            <div class="form-group">
+                <label class="col-md-4 control-label" 
+                       for="codigo">Cantidad
+                </label>  
+                <div class="col-md-2">
+                    <input id="cantidad" 
+                       name="cantidad" 
+                       type="text" 
+                       placeholder="" 
+                       class="form-control input-md"
+                    >
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="col-md-4 control-label" 
+                       for="enviar">
+                </label>
+                <div class="col-md-4">
+                    <button id="enviar"
+                            name="enviar" 
+                            class="btn btn-primary">Enviar
+                    </button>
+                </div>
+            </div>
 
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="enviar"></label>
-                    <div class="col-md-4">
-                        <button id="enviar" name="enviar" class="btn btn-primary">Enviar</button>
-                    </div>
-                </div>
-
-            </fieldset>
-        </form>
-            </fieldset>
+        </fieldset>
+    </form>
+            
         
 
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.validate.js"></script>
-        <script >$("#formulario_impacto").validate();
-        </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script >$("#formulario_impacto").validate();
+    </script>
 
     </body>
 
