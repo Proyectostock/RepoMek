@@ -252,8 +252,8 @@
                 <div class="col-md-4">
                     <select id="ribbon" 
                             name="ribbon" 
-                            class="form-control" 
-                            multiple="multiple">
+                            class="form-control"> 
+<!--                            multiple="multiple">-->
                         <option value="1">P7210</option>
                         <option value="2">P5215</option>
                     </select>
