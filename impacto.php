@@ -14,7 +14,16 @@
                 (
                 $conexion, // La referencia a la base de datos
                 "pedidos", // La tabla en la que se dará de alta
-                array("codigo" => $_POST['codigo'], "tipo_de_insumo" => $_POST['tipo_de_insumo'], "maquina" => $_POST['maquina'], "martillos" => $_POST['martillos'], "ribbon" => $_POST['ribbon'],"tractores" => $_POST['tractores'], "tintas" => $_POST['tintas'], "cantidad" => $_POST['cantidad']) // Los valores del registro "campo" => "valor"
+                array(
+                    "codigo" => $_POST['codigo'],
+                    "tipo_de_insumo" => $_POST['tipo_de_insumo'],
+                    "maquina" => $_POST['maquina'],
+                    "martillos" => $_POST['martillos'],
+                    "ribbon" => $_POST['ribbon'],
+                    "tractores" => $_POST['tractores'],
+                    "tintas" => $_POST['tintas'],
+                    "cantidad" => $_POST['cantidad']
+                    ) // Los valores del registro "campo" => "valor"
                 );
             }
 ?>
