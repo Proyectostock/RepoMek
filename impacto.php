@@ -164,7 +164,7 @@
                         id="codigo" 
                         name="codigo" 
                         type="text" 
-                        placeholder="" 
+                        placeholder="Ingrese un codigo" 
                         class="form-control input-md"
                         required="" 
                         aria-required="true"
@@ -181,8 +181,11 @@
                 </label>
                 <div class="col-md-4">
                     <select id="tipo_de_insumo" 
-                            name="tipo_de_insumo" 
+                            name="tipo_de_insumo"
+                            required="" 
+                            aria-required="true"
                             class="form-control">
+                        <option value="">Ingrese un tipo de Insumo</option>
                         <option value="1">Tintas</option>
                         <option value="2">Martillos</option>
                         <option value="3">Ribbon</option>
@@ -199,8 +202,11 @@
                 </label>
                 <div class="col-md-4"> 
                     <select id="maquina" 
-                            name="maquina" 
+                            name="maquina"
+                            required="" 
+                            aria-required="true"
                             class="form-control">
+                        <option value="">Ingrese un tipo de Maquina</option>
                         <option value="1">Printronik</option>
                         <option value="2">IBM 6500</option>
                     </select>
@@ -237,7 +243,10 @@
                 <div class="col-md-4">
                     <select id="martillos" 
                             name="martillos" 
+                            required="" 
+                            aria-required="true"
                             class="form-control">
+                        <option value="">Ingrese un tipo de Martillo</option>
                         <option value="1">Spring 1500</option>
                         <option value="2">Spring 1505</option>
                     </select>
@@ -251,9 +260,12 @@
                 </label>
                 <div class="col-md-4">
                     <select id="ribbon" 
-                            name="ribbon" 
+                            name="ribbon"
+                            required="" 
+                            aria-required="true"
                             class="form-control"> 
 <!--                            multiple="multiple">-->
+                        <option value="">Ingrese un tipo de Ribbon</option>
                         <option value="1">P7210</option>
                         <option value="2">P5215</option>
                     </select>
@@ -267,8 +279,11 @@
                 </label>
                 <div class="col-md-4">
                     <select id="tractores"
-                            name="tractores" 
+                            name="tractores"
+                            required="" 
+                            aria-required="true"
                             class="form-control">
+                        <option value="">Ingrese un tipo de Tractor</option>                    
                         <option value="1">Generic 1500</option>
                         <option value="2">Generic 1505</option>
                     </select>
@@ -281,8 +296,11 @@
                 </label>
                 <div class="col-md-4">
                     <select id="tintas"
-                            name="tintas" 
+                            name="tintas"
+                            required="" 
+                            aria-required="true"
                             class="form-control">
+                        <option value="">Ingrese un tipo de Tinta</option>
                         <option value="1">Alta penetrancia</option>
                         <option value="2">Negro penetrante</option>
                         <option value="3">Viro verde</option>
@@ -300,7 +318,9 @@
                     <input id="cantidad" 
                        name="cantidad" 
                        type="text" 
-                       placeholder="" 
+                       placeholder="Ingrese una cantidad"
+                       required="" 
+                       aria-required="true"
                        class="form-control input-md"
                     >
                 </div>
