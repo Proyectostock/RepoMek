@@ -340,7 +340,22 @@
 
         </fieldset>
     </form>
-            
+    <footer class="white-color hide-on-mobile">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="footer-logo">
+                <img id="Img1" alt="Mek" src="img/iconohead.ico" height="35" width="35">
+            </div>
+        </div>
+        <div class="col-md-6 text-right">
+            <a class="footer-legales" href="#">Términos y Condiciones.</a>
+        </div>
+    </div>
+    </footer>
+
+
+
+
         
 
     <script src="js/jquery.min.js"></script>
