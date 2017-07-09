@@ -91,6 +91,11 @@
     background-color:white
 }
 
+.form-horizontal{
+    /*Al pasar el cursor*/
+    color:#128e8c;
+}
+
 .btn-primary {
     background-color: #0ABFBC !important;
     color: white !important;
