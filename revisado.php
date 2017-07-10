@@ -268,7 +268,7 @@
         type="text" 
         placeholder="Ingrese una cantidad" 
         class="form-control input-md" 
-        required="">
+         required="">
     
   </div>
 </div>
