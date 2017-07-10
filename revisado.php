@@ -1,3 +1,30 @@
+<?php include("funciones.php");
+    $conexion = conectar_BD(
+    "localhost",
+    "repomek",
+    "root",
+    ""
+   );   
+    var_dump($_POST);
+        if ($_POST)
+        {
+        alta_registro
+            (
+                    $conexion,
+            "pedidos_revisado",
+            array(
+            "codigo" => $_POST['codigo'],
+            "tipos_de_insumos" => $_POST['tipos_de_insumos'],
+            "tipos_de_cheques" => $_POST['tipos_de_cheques'],
+            "tipos_de_planillas" => $_POST['tipos_de_planillas'],
+            "tapas" => $_POST['tapas'],
+            "contratapas" => $_POST['contratapas'],
+            "cantidad" => $_POST['cantidad']
+            )
+             );
+        }
+?>
+
 <html lang="es">
     <head>
         <meta charset="UTF-8">
@@ -94,138 +121,188 @@
         </div>
 
         
-     <form class="form-horizontal">
-        <fieldset>
+    <form class="form-horizontal">
+<fieldset>
 
-        <!-- Form Name -->
+<!-- Form Name -->
+<legend></legend>
 
-
-        <!-- Select Basic -->
+<!-- Text input-->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="selectbasic">Operaria</label>
-          <div class="col-md-4">
-            <select id="selectbasic" name="selectbasic" class="form-control">
-              <option value="1">NombreRevisado1</option>
-              <option value="2">NombreRevisado2</option>
-              <option value="">NombreRevisado3</option>
-              <option value="">NombreRevisado4</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- Select Basic -->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="insumo_revisado">Insumos de revisado</label>
-          <div class="col-md-4">
-            <select id="insumo_revisado" name="insumo_varios" class="form-control">
-              <option value="1">Bandas elasticas</option>
-              <option value="2">Bolsas trasparentes</option>
-              <option value="3">Cintas de lomo negro</option>
-            </select>
-          </div>
-        </div>
-              
-
-        <!-- Select Basic -->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="tapas_revisado">Tapas</label>
-          <div class="col-md-4">
-            <select id="tapas_revisado" name="tapas_revisado" class="form-control">
-                <option value="1">Credicoop</option>
-                <option value="2">Nación</option>
-                <option value="3">Provincia</option>
-                <option value="4">Ciudad</option>
-                <option value="5">Chubut</option>
-                <option value="6">Chaco</option>
-                <option value="7">Industrial</option>
-                <option value="8">Frances</option>
-                <option value="9">Patagonia</option>
-                <option value="10">Rio Corporativa</option>
-                <option value="11">Rio Select</option>
-                <option value="12">Rio Infinity</option>
-                <option value="13">Rio Infinity gold</option>
-                <option value="14">Rio Advanced</option>
-                <option value="15">Piano</option>
-                <option value="16">Comafi</option>
-                <option value="17">Banco de Valores</option>
-                <option value="18">Caja de valores</option>
-                <option value="19">Hipotecario</option>
-                <option value="20">Finansur</option>
-                <option value="21">Columbia</option>
-                <option value="22">Corrientes</option>
-                <option value="23">Galicia</option>
-                <option value="24">Galicia Cuenta Corriente</option>
-                <option value="25">Galicia Eminent</option>
-                <option value="26">Galicia Eminent cuenta corriente</option>
-
-            </select>
-          </div>
-        </div>
-
-        <!-- Select Basic -->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="contratapas_revisado">Contratapas</label>
-          <div class="col-md-4">
-            <select id="contratapas_revisado" name="contratapas_revisado" class="form-control">
-                <option value="1">Credicoop</option>
-                <option value="2">Nación</option>
-                <option value="3">Provincia</option>
-                <option value="4">Ciudad</option>
-                <option value="5">Chubut</option>
-                <option value="6">Chaco</option>
-                <option value="7">Industrial</option>
-                <option value="9">Patagonia</option>
-                <option value="10">Rio Corporativa</option>
-                <option value="11">Rio Select</option>
-                <option value="12">Rio Infinity</option>
-                <option value="13">Rio Infinity gold</option>
-                <option value="14">Rio Advanced</option>
-                <option value="15">Piano</option>
-                <option value="17">Banco de Valores</option>
-                <option value="18">Caja de valores</option>
-                <option value="19">Hipotecario</option>
-                <option value="20">Finansur</option>
-                <option value="21">Columbia</option>
-                <option value="22">Corrientes</option>
-                <option value="23">Genericas(Blancas)</option>
-            </select>
-          </div>
-        </div>   
-                
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="planillas_revisado">Planillas</label>
-          <div class="col-md-4">
-            <select id="planillas_revisado" name="planillas_revisado" class="form-control">
-                <option value="1">Planilla de Provincia</option>
-                <option value="2">Planilla y Calendario de Rio</option>
-                <option value="3">Planilla y Calendario de Tierra del fuego</option>
-                <option value="4">Planilla y Calendario de Francés</option>
-                <option value="5">Planilla Generica</option>
-            </select>
-          </div>      
-        </div>
-        
-            
-
-        <!-- Text input-->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="cantidad_revisado">Cantidad</label>  
+          <label class="col-md-4 control-label" for="textinput">Codigo</label>  
           <div class="col-md-2">
-          <input id="cantidad_revisado" name="cantidad_revisado" type="text" placeholder="" class="form-control input-md">
+          <input id="textinput" 
+                name="textinput" 
+                type="text" 
+                placeholder="Ingrese un codigo" 
+                class="form-control input-md" 
+                required="">
+            
           </div>
         </div>
-
+<!-- Select Basic -->
         <div class="form-group">
-         <label class="col-md-4 control-label" for="enviar"></label>
+          <label class="col-md-4 control-label" for="insumo_revisado">Tipos de insumos</label>
           <div class="col-md-4">
-            <button id="enviar" name="enviar" class="btn btn_primary">Enviar</button>
+            <select 
+                    id="insumo_revisado" 
+                    name="insumo_revisado" 
+                    class="form-control">
+              <option value="1">Ingrese un tipo de insumo</option>
+              <option value="2">Tapas</option>
+              <option value="3">Contratapas</option>
+              <option value="4">Bandas elasticas</option>
+              <option value="5">Bolsas plasticas</option>
+              <option value="6">Rollo de lomo</option>
+              <option value="7">Planillas</option>
+            </select>
           </div>
         </div>
 
-        </fieldset>
-        </form>
+<!-- Select Basic -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="tipo_cheque">Tipos de cheques</label>
+          <div class="col-md-4">
+            <select 
+                    id="tipo_cheque" 
+                    name="tipo_cheque" 
+                    class="form-control">
+              <option value="1">Ingrese un tipo de cheque</option>
+              <option value="2">Comun</option>
+              <option value="3">Diferido</option>
+            </select>
+          </div>
+        </div>
 
+<div class="form-group">
+  <label class="col-md-4 control-label" for="tipo_planilla">Tipos de planillas</label>
+  <div class="col-md-4">
+    <select 
+           id="tipo_planilla" 
+           name="tipo_planilla" 
+           class="form-control">
+      <option value="1">Ingrese un tipo de planilla</option>
+      <option value="2">Provincia</option>
+      <option value="3">Rio</option>
+      <option value="4">Tierra del fuego</option>
+      <option value="5">Frances</option>
+      <option value="6">Generica</option>
+    </select>
+  </div>
+</div>
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="tapas_revisado">Tapas</label>
+  <div class="col-md-4">
+    <select 
+           id="tapas_revisado" 
+           name="tapas_revisado" 
+           class="form-control">
+      <option value="1">Ingrese un tipo de tapa</option>
+      <option value="2">Credicoop</option>
+      <option value="3">Nacion</option>
+      <option value="4">Provincia</option>
+      <option value="5">Ciudad</option>
+      <option value="6">Chubut</option>
+      <option value="7">Chaco</option>
+      <option value="8">Industrial</option>
+      <option value="9">Frances</option>
+      <option value="10">Patagonia</option>
+      <option value="11">Rio Corporativa</option>
+      <option value="12">Rio Select</option>
+      <option value="13">Rio Infinity</option>
+      <option value="14">Rio Infinity Gold</option>
+      <option value="15">Rio Advanced</option>
+      <option value="16">Piano</option>
+      <option value="17">Comafi</option>
+      <option value="18">Banco de valores</option>
+      <option value="19">Caja de valores</option>
+      <option value="20">Hipotecario</option>
+      <option value="21">Finansur</option>
+      <option value="22">Columbia</option>
+      <option value="23">Corrientes</option>
+      <option value="24">Galicia</option>
+      <option value="25">Galicia Eminent</option>
+      <option value="26">Galicia Eminent Cuenta corriente</option>
+    </select>
+  </div>
+</div>
 
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="tipos_contratapas">Contratapas</label>
+  <div class="col-md-4">
+    <select 
+           id="tipos_contratapas" 
+           name="tipos_contratapas" 
+           class="form-control">
+      <option value="1">Ingrese un tipo de contratapa</option>
+      <option value="2">Credicoop</option>
+      <option value="3">Nacion</option>
+      <option value="4">Provincia</option>
+      <option value="5">Ciudad</option>
+      <option value="6">Chubut</option>
+      <option value="7">Chaco</option>
+      <option value="8">Industrial</option>
+      <option value="9">Frances</option>
+      <option value="10">Patagonia</option>
+      <option value="11">Rio</option>
+      <option value="12">Piano</option>
+      <option value="13">Banco de valores</option>
+      <option value="14">Caja de valores</option>
+      <option value="15">Hipotecario</option>
+      <option value="16">Finansur</option>
+      <option value="17">Columbia</option>
+      <option value="18">Corrientes</option>
+      <option value="19">Generica (Blanca)</option>
+    </select>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="cantidad">Cantidad</label>  
+  <div class="col-md-2">
+  <input 
+        id="cantidad" 
+        name="cantidad" 
+        type="text" 
+        placeholder="Ingrese una cantidad" 
+        class="form-control input-md" 
+        required="">
+    
+  </div>
+</div>
+
+<div class="form-group">
+                <label class="col-md-4 control-label" 
+                       for="enviar">
+                </label>
+                <div class="col-md-4">
+                    <button id="enviar"
+                            name="enviar" 
+                            class="btn btn-primary">Enviar
+                    </button>
+                </div>
+            </div>
+
+</fieldset>
+
+    <footer class="white-color hide-on-mobile">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="footer-logo">
+                <img id="Img1" 
+                    alt="Mek" 
+                    src="img/iconohead.ico" 
+                    height="35" 
+                    width="35">
+            </div>
+        </div>
+        <div class="col-md-6 text-right">
+            <a class="footer-legales" href="#">Términos y Condiciones.</a>
+        </div>
+    </div>
+    </footer>
 
 
 

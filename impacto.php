@@ -207,7 +207,7 @@
                             aria-required="true"
                             class="form-control">
                         <option value="">Ingrese un tipo de Maquina</option>
-                        <option value="1">Printronik</option>
+                        <option value="1">Printronix</option>
                         <option value="2">IBM 6500</option>
                     </select>
 <!--                    <label 
