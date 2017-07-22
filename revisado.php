@@ -6,19 +6,20 @@
     ""
    );   
     var_dump($_POST);
+        
         if ($_POST)
         {
         alta_registro
             (
-                    $conexion,
+            $conexion,
             "pedidos_revisado",
             array(
             "codigo" => $_POST['codigo'],
-            "tipos_de_insumos" => $_POST['tipos_de_insumos'],
-            "tipos_de_cheques" => $_POST['tipos_de_cheques'],
-            "tipos_de_planillas" => $_POST['tipos_de_planillas'],
-            "tapas" => $_POST['tapas'],
-            "contratapas" => $_POST['contratapas'],
+            "insumo_revisado" => $_POST['tipos_de_insumos'],
+            "tipo_cheque" => $_POST['tipo_cheque'],
+            "tipo_planilla" => $_POST['tipo_planilla'],
+            "tapas_revisado" => $_POST['tapas_revisado'],
+            "contratapas_revisado" => $_POST['contratapas_revisado'],
             "cantidad" => $_POST['cantidad']
             )
              );
@@ -131,7 +132,7 @@
         <div class="form-group">
           <label class="col-md-4 control-label" for="textinput">Codigo</label>  
           <div class="col-md-2">
-          <input id="textinput" 
+          <input id="codigo" 
                 name="textinput" 
                 type="text" 
                 placeholder="Ingrese un codigo" 
@@ -224,6 +225,7 @@
       <option value="24">Galicia</option>
       <option value="25">Galicia Eminent</option>
       <option value="26">Galicia Eminent Cuenta corriente</option>
+      <option value="27">Tierra del fuego</option>
     </select>
   </div>
 </div>
@@ -234,7 +236,7 @@
   <div class="col-md-4">
     <select 
            id="tipos_contratapas" 
-           name="tipos_contratapas" 
+           name="contratapas_revisado" 
            class="form-control">
       <option value="1">Ingrese un tipo de contratapa</option>
       <option value="2">Credicoop</option>
@@ -254,7 +256,8 @@
       <option value="16">Finansur</option>
       <option value="17">Columbia</option>
       <option value="18">Corrientes</option>
-      <option value="19">Generica (Blanca)</option>
+      <option value="19">Tierra del fuego</option>
+      <option value="20">Generica (Blanca)</option>
     </select>
   </div>
 </div>

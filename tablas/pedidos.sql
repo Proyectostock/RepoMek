@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-06-2017 a las 04:03:14
+-- Tiempo de generación: 20-07-2017 a las 16:31:06
 -- Versión del servidor: 10.1.21-MariaDB
--- Versión de PHP: 7.1.1
+-- Versión de PHP: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -28,12 +28,12 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `pedidos` (
   `codigo` int(11) NOT NULL,
-  `tipo_de_insumo` varchar(256) NOT NULL,
-  `maquina` varchar(256) NOT NULL,
-  `martillos` varchar(256) NOT NULL,
-  `ribbon` varchar(256) NOT NULL,
-  `tractores` varchar(256) NOT NULL,
-  `tintas` varchar(256) NOT NULL,
+  `tipo_de_insumo` enum('TINTAS','MARTILLOS','RIBBON','TRACTORES') NOT NULL,
+  `maquina` enum('PRINTRONIX','IBM 6500') NOT NULL,
+  `martillos` enum('SPRING 1500','SPRING 1505') NOT NULL,
+  `ribbon` enum('P7210','P5215') NOT NULL,
+  `tractores` enum('GENERIC 1500','GENERIC 1505') NOT NULL,
+  `tintas` enum('ALTA PENETRANCIA','NEGRO PENETRANTE','VIRO VERDE','INVISIBLE','NEGRO FIJO') NOT NULL,
   `cantidad` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -42,7 +42,8 @@ CREATE TABLE `pedidos` (
 --
 
 INSERT INTO `pedidos` (`codigo`, `tipo_de_insumo`, `maquina`, `martillos`, `ribbon`, `tractores`, `tintas`, `cantidad`) VALUES
-(1, '1', '', '', '', '', '', 0);
+(1, 'TINTAS', 'PRINTRONIX', 'SPRING 1505', 'P7210', 'GENERIC 1500', 'ALTA PENETRANCIA', 10),
+(2, 'TINTAS', 'PRINTRONIX', 'SPRING 1500', 'P7210', 'GENERIC 1500', 'NEGRO PENETRANTE', 20);
 
 --
 -- Índices para tablas volcadas
