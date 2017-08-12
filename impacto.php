@@ -63,7 +63,7 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
 <!--Acceso directo al Menu principal-->
-                        <li><a href="index.php">Inicio</a></li>
+                        <li><a href="index.php">INICIO</a></li>
 <!--Inventario Menu desplegable hacia abajo-->
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
